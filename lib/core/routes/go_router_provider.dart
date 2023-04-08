@@ -5,12 +5,11 @@ import 'package:todo_app/features/dashboard/presentation/pages/dashboard_screen.
 import 'package:todo_app/features/settings/presentation/pages/settings_screen.dart';
 import 'package:todo_app/features/todo/presentation/pages/todo_screen.dart';
 
-final GlobalKey<NavigatorState> _rootNavigatorKey =
-    GlobalKey(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigatorKey =
-    GlobalKey(debugLabel: 'shell');
-
 class GoRouterProvider {
+  final GlobalKey<NavigatorState> _rootNavigatorKey =
+      GlobalKey(debugLabel: 'root');
+  final GlobalKey<NavigatorState> _shellNavigatorKey =
+      GlobalKey(debugLabel: 'shell');
   late final GoRouter router =
       GoRouter(navigatorKey: _rootNavigatorKey, initialLocation: '/', routes: [
     ShellRoute(
